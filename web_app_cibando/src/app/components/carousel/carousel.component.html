@@ -1,0 +1,39 @@
+<!--<div *ngIf="images.length===1" class="variabilePercorso2">
+  <img [src]="percorso2" alt="image"/>
+</div>
+
+<ngb-carousel *ngIf="images.length>1" [interval] ="10000">
+  <ng-template ngbSlide *ngFor="let image of images; let i=index">
+
+      <div class="picsum-img-wrapper">
+			<img [src]="percorso + image.id + '.jpg'" [alt]="image.label"/>
+		</div>
+
+		<div class="carousel-caption">
+			<h3>{{images[0].label}}</h3>
+      <h2 *ngIf="images.length === i+1">Ultima immagine dello slide</h2>
+		</div> -->
+
+
+
+<ngb-carousel *ngIf="images.length>1; else noSlide" [interval]="5000">
+
+  <ng-template ngbSlide *ngFor="let image of images; let i=index">
+
+    <div class="picsum-img-wrapper">
+      <img [src]="percorso + image.id + '.jpg'" [alt]="image.label" />
+    </div>
+
+    <div class="carousel-caption">
+      <h3>{{ images[0].label }}</h3>
+      <h2 *ngIf="images.length === i + 1">Ultima immagine dello slide</h2>
+    </div>
+  </ng-template>
+</ngb-carousel>
+
+<ng-template #noSlide>
+  <!--reference template. è un riferimento per if-->
+  <div class="variabilePercorso2">
+    <img [src]="percorso + images[0].id +'.jpg'" [alt]="" images[0].label /> <!-- {{percorso2}} -->
+  </div>
+</ng-template>

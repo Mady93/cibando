@@ -1,0 +1,71 @@
+@import '~bootstrap/scss/bootstrap';
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+footer{
+  height: 100px;
+  width:100%;
+  background-color:#8e210b;
+}
+
+
+
+#main-container{
+  padding: 15px; //spazio a destra e sinistra
+p{
+text-align: justify; //testo giustificato, no sinistra o destra
+font-size: 13px;
+}
+}
+
+.testo-evidenziato{
+  background-color: yellow;
+  width: 548px;
+}
+
+.variabilePercorso2{
+  margin-top: -19px; // attacca l'img alla navbar
+  margin-bottom: 20px;
+}
+
+
+//Stili Bootstrap per Carousel
+ngb-carousel.carousel.slide{
+margin-top: -19px; // attacca l'img alla navbar
+margin-bottom: 20px;
+
+
+.carousel-caption{
+  top: 26rem;
+
+  h3{
+    font-family: "Homemade Apple",cursive;
+    font-size: 40px;
+    text-shadow: black 2px 3px 3px; // x,y e sfogatura
+  }
+
+  h2{
+    font-size: 20px;
+    text-shadow: black 2px 2px 3px;
+    font-weight: lighter;
+  }
+
+}
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon{
+opacity: 1, im !important;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon{
+  width: 4rem;
+  height: 4rem;
+}
+
+
+
+
+
