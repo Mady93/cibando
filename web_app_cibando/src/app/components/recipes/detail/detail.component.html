@@ -1,0 +1,16 @@
+<div class="container-fluid">
+  <div class="container-image">
+    <div class="card-image" [ngStyle]="{'background-image': 'url(' + ricetta.image + ')'}">
+    </div>
+    <div class="container-testo" >
+      <h5 class="card-title">{{ricetta.title}}</h5>
+      <p class="card-text">{{ricetta.description}}</p>
+    </div>
+    <div class="difficolta"><strong>difficolta</strong>
+<p class="stelline">stelline</p>
+    </div>
+    <div class="container-data">
+      <p class="data">Ricetta pubblicata {{ricetta.date}}</p>
+    </div>
+  </div>
+</div>

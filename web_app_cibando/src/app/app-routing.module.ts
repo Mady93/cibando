@@ -1,8 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 //importare home e le ricette
 import { HomeComponent } from './components/home/home.component';
 import { RecipesComponent } from './components/recipes/recipes.component';
+
+//############
+import { DetailComponent } from './components/recipes/detail/detail.component';
 
 //si lavora solo nell'array di router
 const routes: Routes = [
@@ -11,6 +15,9 @@ const routes: Routes = [
   //path -nome percorso,il componente che deve richhiamare
   {path: 'home',component: HomeComponent},
   {path: 'ricette',component: RecipesComponent},
+
+  //#############
+  {path: 'dettaglio/:_id', component: DetailComponent},
 
   //{path: '**',nomeComponente404}
   {path: '**',redirectTo: 'home'}

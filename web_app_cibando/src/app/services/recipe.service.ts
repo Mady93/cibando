@@ -18,5 +18,15 @@ export class RecipeService {
     //Alla fine al posto di questo ci metto la chiamata, mentre il resto rimane uguale
 return of (RECIPES);
   }
-}
  // creo componente recipes
+
+
+ //### ritorna il dettaglio in base al id -- evento
+ getRecipe(id:number):Observable<Recipe>{
+const recipe = RECIPES.find(recipe => recipe._id === id);
+return of(recipe);
+}
+
+}
+
+
