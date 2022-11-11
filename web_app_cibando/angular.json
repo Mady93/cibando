@@ -6,7 +6,10 @@
     "web_app_cibando": {
       "projectType": "application",
       "schematics": {"@schematics/angular:component": {
-        "style": "scss"}
+        "style": "scss"},
+        "@schematics/angular:application": {
+          "strict": true
+        }
       },
       "root": "",
       "sourceRoot": "src",

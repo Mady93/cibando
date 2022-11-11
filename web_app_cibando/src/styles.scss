@@ -17,7 +17,7 @@ footer{
   padding: 15px; //spazio a destra e sinistra
 p{
 text-align: justify; //testo giustificato, no sinistra o destra
-font-size: 13px;
+font-size: 21px;
 }
 }
 
@@ -69,3 +69,6 @@ opacity: 1, im !important;
 
 
 
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

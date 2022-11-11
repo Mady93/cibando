@@ -6,11 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./carousel.component.scss']
 })
 export class CarouselComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
   images = [
     {
     id: 1,
@@ -26,7 +21,13 @@ export class CarouselComponent implements OnInit {
     }
   ];
 
-  percorso ='../assets/img/carousel-';
-  percorso2 = '../assets/img/carousel-1.jpg';
+  percorso ='../../../assets/img/carousel-';
+  percorso2 = '../../../assets/img/carousel-1.jpg';
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
 
 }
