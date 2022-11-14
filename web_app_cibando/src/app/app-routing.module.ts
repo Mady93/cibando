@@ -12,7 +12,7 @@ const routes: Routes = [
   {path:'',redirectTo: 'home',pathMatch:'full'},
   {path: 'home',component: HomeComponent},
   {path:'ricette',component: RecipesComponent,children: [
-    {path: 'dettaglio/:_id', component: DetailComponent},
+    {path: 'dettaglio/:title/:_id', component: DetailComponent},
     {path:'', pathMatch: 'full', component: RecipesListComponent}
   ]},
 
@@ -20,7 +20,6 @@ const routes: Routes = [
  // {path: 'dettaglio/:_id', component: DetailComponent},
   //{path: '**',nomeComponente404}
   {path: '**',redirectTo: 'home'}
-
 ];
 
 @NgModule({

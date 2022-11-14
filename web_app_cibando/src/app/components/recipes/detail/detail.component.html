@@ -1,4 +1,11 @@
-<div class="container-fluid">
+<div>
+  <!--#########################################################################-->
+  <div class="error" *ngIf="!ricetta" noSlide>
+    <h4>Ricetta non trovata!</h4>
+    </div>
+</div>
+
+<div class="container-fluid" #noSlide>
   <div class="container-image">
     <div class="card-image" [ngStyle]="{'background-image': 'url(' + ricetta.image + ')'}">
     </div>
@@ -6,11 +13,18 @@
       <h5 class="card-title">{{ricetta.title}}</h5>
       <p class="card-text">{{ricetta.description}}</p>
     </div>
-    <div class="difficolta"><strong>difficolta</strong>
-<p class="stelline">stelline</p>
+    <br>
+    <div class="difficolta"><span class="difficulty">Difficoltà:</span>
+      <div class="row">
+       <!-- <p class="stelle">{{ricetta.difficulty}}</p> -->
+        <img [src]="percorsoDifficolta+ricetta?.difficulty +'.png'" class="difficult" alt="difficoltà">
+      </div>
+
     </div>
     <div class="container-data">
-      <p class="data">Ricetta pubblicata {{ricetta.date}}</p>
+      <p class="data">Ricetta pubblicata {{ricetta.date | date}}</p>
     </div>
   </div>
 </div>
+
+

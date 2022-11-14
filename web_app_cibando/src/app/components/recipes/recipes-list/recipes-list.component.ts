@@ -16,6 +16,7 @@ export class RecipesListComponent implements OnInit {
   //egli serve a costruire, quindi va a prendere tutto del services
   //il services va inniettato nelcostruttore
 
+  titoloRicevuto: string;
   constructor(private recipeService: RecipeService) { }
 
   ngOnInit(): void {
@@ -31,7 +32,14 @@ export class RecipesListComponent implements OnInit {
       }
     })
   }
+//////////////////DA SAPPERE ///////////////////////////////
 
-}
-
-
+  // metodo del padre per ricevere l'output del figlio recipe-card.component.ts
+  riceviTitolo(e: any){
+    if (this.titoloRicevuto && this.titoloRicevuto === e) {
+      this.titoloRicevuto ='';
+    }else{
+      this.titoloRicevuto = e;
+    }
+  }
+  }

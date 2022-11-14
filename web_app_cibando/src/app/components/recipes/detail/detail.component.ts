@@ -1,9 +1,10 @@
-import { Recipe } from 'src/app/models/recipe.model';
 import { Component, OnInit } from '@angular/core';
+import { Recipe } from 'src/app/models/recipe.model';
 
 //####### router gestisce le rotte dalla classe
 import { ActivatedRoute, Router } from '@angular/router';
 import { RecipeService } from 'src/app/services/recipe.service';
+
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
@@ -12,6 +13,8 @@ import { RecipeService } from 'src/app/services/recipe.service';
 export class DetailComponent implements OnInit {
   //######## per associre i dati creare la variabile
   ricetta: Recipe;
+  percorsoDifficolta = "../../../../assets/img/difficolta-";
+  error = "Recipe not found";
 
   //######## quando uso i service -- si come il service e injectable, ora devo inniettare nelcostruttore il servizio
   //##### activatedRoute -- prendo la rotta attivata
@@ -53,6 +56,6 @@ export class DetailComponent implements OnInit {
       if(idN){
       this.recipeService.getRecipe(idN).subscribe(res => this.ricetta = res);
   }
-})
+});
   }
 }

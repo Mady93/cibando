@@ -2,7 +2,7 @@
   display:block;
   //float:left;
   margin-bottom: 20px;
-  height: 100vh;
+  height: 110vh;
 
   .container-image{
     //width:23%;
@@ -11,9 +11,11 @@
     margin-bottom: 20px;
   }
   .card-title{
-    font-size: bold;
+    //font-size: bold;
     font-size: 23px;;
     color: #8e210b;
+    font-weight: bold;
+    padding: 10px;
   }
 
 .card-image{
@@ -22,10 +24,45 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  margin-top: 0px;
+  margin-left: -24px;
+  margin-right: -24px;
 }
-p,h5{
+.card-text{
   padding: 10px;
-  //font-weight: bold;
+}
+
+}
+.difficulty{
+  font-weight: bold;
+  padding: 9px;
+}
+.stelle{
+  padding-left: 10px;
+}
+
+.data{
+  padding: 10px;
+  margin-left: 84%;
+}
+
+/*.container, .container-fluid, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm {
+  --bs-gutter-x: 1.5rem;
+}
+*/
+.difficult{
+  width:160px;
+  margin-top:10px;
+  margin-bottom: 10px;
+}
+
+.error{
+text-align: center;
+height: 70vh;
+
+h4{
+  position: relative;
+  top:50%;
 }
 }
 
