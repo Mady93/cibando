@@ -1,7 +1,6 @@
 <div class="container-cards" id="div-card">
-  <div class="card" *ngFor="let recipe of recipes">
+  <div class="card" *ngFor="let recipe of ricette">
     <div class="card-image" [ngStyle]="{'background-image': 'url(' + recipe.image + ')'}" (click)="inviaTitolo(recipe.title)">
-
     </div>
     <div class="card-body" >
       <h5 class="card-title">{{recipe.title}}</h5>

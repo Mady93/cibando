@@ -11,11 +11,7 @@ export class RecipeService {
 
   constructor() { }
 
-  //metodo che andra a fare una chiamata mockata che restituira tutte le ricette
-  // tipizzato come obj observable e come ricette- E un metodo asincrono per le ricette
   getRecipes(): Observable <Recipe[]>{
-    // mi ritorna il contenuto del mock ricette.
-    //Alla fine al posto di questo ci metto la chiamata, mentre il resto rimane uguale
 return of (RECIPES);
   }
  // creo componente recipes

@@ -1,0 +1,266 @@
+<!--TEMPLATE DRIVEN-->
+
+<!-- <form>
+  <div col-6>
+    <div class="mb-3">
+      <label for="nome" class="form-label">nome </label>
+      <input type="text" class="form-control" name="nome" id="name" ngModel>
+    </div>
+
+    <div class="mb-3">
+      <label for="email" class="form-label">email </label>
+      <input type="email" class="form-control" name="email" id="email" ngModel>
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">password </label>
+      <input type="password" class="form-control" name="password" id="password" ngModel>
+    </div>
+    <div class="mb-3">
+      <label for="ripetiPassword" class="form-label">ripeti password </label>
+      <input type="password" class="form-control" name="ripetiPassword" id="password" ngModel>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="accetto" name="accetto" ngModel>
+      <label class="form-check-label" for="accetto">
+        Dichiaro di accettare i termini del servizio</label>
+    </div>
+    <div class="col-auto">
+      <button type="submit" class="btn btn-primary mb-3" ngModel>Invia</button>
+    </div>
+    <div col="5">
+      <img alt ="foto" src="https://1.bp.blogspot.com/-54hQvqf5owc/Xh8KX4aeJiI/AAAAAAABa7U/GP2aklm7NVs9fX0FgvsK9qcFDXtQGiW-gCLcBGAsYHQ/s1600/Cucina%2BItaliana.jpg " ngModule>
+      </div>
+  </div>
+
+</form>
+-->
+
+
+
+<!-- <div class="container">
+
+  <form class="mx-md-4" [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <div class="row justify-content-center ">
+      <h2 class="title row justify-content-center">Registrazione</h2>
+    </div>
+
+    <div class="row mt-2">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 offset-lg-3 text-center">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" name="nome" id="name" formControlName="nome">
+          <label for="nome" class="form-label">nome </label>
+          <p class="help is-danger" *ngIf="form.controls['email'].hasError('required')">Il è obbligatorio</p>
+          <p class="help is-danger" *ngIf="form.controls['email'].hasError('minLength')">Il campo nome deve contenere
+            minimo 2 caratteri</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-2">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 offset-lg-3 text-center">
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" name="email" id="email" formControlName="email">
+          <label for="email" class="form-label">email </label>
+          <p class="help is-danger" *ngIf="form.controls['email'].hasError('required')">Il è obbligatorio</p>
+          <p class="help is-danger" *ngIf="form.controls['email'].hasError('email')">Il campo email è scritto in modo
+            errato</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-2">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 offset-lg-3 text-center">
+        <div class="form-floating mb-3">
+          <input type="password" class="form-control" name="password" id="password" formControlName="password">
+          <label for="password" class="form-label">password </label>
+          <p class="help is-danger" *ngIf="!form.get('password').valid && form.get('password').touched">Il è
+            obbligatorio</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-2">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 offset-lg-3 text-center">
+        <div class="form-floating mb-3">
+          <input type="password" class="form-control" name="ripetiPassword" id="password"
+            formControlName="ripetiPassword">
+          <p class="help is-danger" *ngIf="!form.get('ripetiPassword').valid && form.get('ripetiPassword').touched">Il è
+            obbligatorio</p><label for="ripetiPassword" class="form-label">ripeti password </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-2">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 offset-lg-3 text-center">
+        <div class="form-floating mb-3 div-check">
+          <input class="form-check-input" type="checkbox" value="" id="accetto" name="accetto"
+            formControlName="accetto">
+          <label class="form-check-label" for="accetto">
+            Dichiaro di accettare i termini del servizio</label>
+          <p class="help is-danger" *ngIf="!form.get('accetto').valid && form.get('accetto').touched">Il è obbligatorio
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center mt-2 ">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 d-grid gap-2 text-center">
+        <button type="submit" class="btn btn-primary mb-3" [disabled]="!form.valid">Invia</button>
+        <p class="help correct" *ngIf="form.valid">Il form è coretto, adesso puo essere inviato</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <img alt="foto" src="https://1.bp.blogspot.com/-54hQvqf5owc/Xh8KX4aeJiI/AAAAAAABa7U/GP2aklm7NVs9fX0FgvsK9qcFDXtQGiW-gCLcBGAsYHQ/s1600/Cucina%2BItaliana.jpg ">
+    </div>
+  </form>
+</div> -->
+
+
+
+
+
+
+
+
+
+<!--############################################################################################-->
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+    <div class="card text-black" style="border-radius: 25px">
+    <div class="card-body">
+      <div class="row justify-content-center">
+        <div class="col-5">
+
+          <h1 class="text-center h1 fw-bold mb-5 mx-md-4 mt-4">Registrati</h1>
+
+
+          <form class="mx-md-4" [formGroup]="form" (ngSubmit)="onSubmit()">
+
+
+
+            <div class="d-flex flex-row align-items-center mb-4">
+              <div class="form-outline flex-fill mb-0">
+
+                <input type="text" class="form-control" name="nome" id="nome" formControlName="nome">
+                <label for="nome" class="form-label">nome </label>
+                <p class="help is-danger" *ngIf="form.controls['nome'].hasError('minlength')">Il campo nome deve contenere
+                  minimo 2 caratteri</p>
+                  <p class="help is-danger" *ngIf="!form.controls.nome.valid && form.get('nome').touched">Il campo è obbligatorio</p>
+              </div>
+              </div>
+
+
+
+              <div class="d-flex flex-row align-items-center mb-4">
+                <div class="form-outline flex-fill mb-0">
+
+                <input type="text" class="form-control" name="cognome" id="cognome" formControlName="cognome">
+                <label for="nome" class="form-label">cognome </label>
+                <p class="help is-danger" *ngIf="form.controls['cognome'].hasError('minlength')">Il campo cognome deve contenere
+                  minimo 2 caratteri</p>
+                  <p class="help is-danger" *ngIf="!form.controls.cognome.valid && form.get('cognome').touched">Il campo è obbligatorio</p>
+
+              </div>
+              </div>
+
+
+
+              <div class="d-flex flex-row align-items-center mb-4">
+                <div class="form-outline flex-fill mb-0">
+
+                <input type="text" class="form-control" name="codiceFiscale" id="codiceFiscale" formControlName="codiceFiscale">
+                <label for="nome" class="form-label">codice fiscale </label>
+                <p class="help is-danger" *ngIf="form.controls['codiceFiscale'].hasError('minlength')">Il codice fiscale nome deve contenere
+                  minimo 16 caratteri</p>
+                  <p class="help is-danger" *ngIf="!form.controls.codiceFiscale.valid && form.get('codiceFiscale').touched">Il campo è obbligatorio</p>
+              </div>
+              </div>
+
+
+
+              <div class="d-flex flex-row align-items-center mb-4">
+                <div class="form-outline flex-fill mb-0">
+
+                <input type="date" class="form-control" name="dataNascita" id="codiceFiscale" formControlName="dataNascita">
+                <label for="nome" class="form-label">data di nascita </label>
+                <p class="help is-danger" *ngIf="form.controls['dataNascita'].hasError('required')">Il campo è obbligatorio</p>
+              </div>
+              </div>
+
+
+
+              <div class="d-flex flex-row align-items-center mb-4">
+                <div class="form-outline flex-fill mb-0">
+
+                <input type="email" class="form-control" name="email" id="email" formControlName="email">
+                <label for="email" class="form-label">email </label>
+                <p class="help is-danger" *ngIf="form.controls['email'].hasError('email')">Il campo email è scritto in modo
+                  errato</p>
+                  <p class="help is-danger" *ngIf="form.controls.email.valid && form.controls.email.touched">Il campo è obbligatorio</p>
+              </div>
+              </div>
+
+
+
+              <div class="d-flex flex-row align-items-center mb-4">
+                <div class="form-outline flex-fill mb-0">
+
+                <input type="password" class="form-control" name="password" id="password" formControlName="password">
+                <label for="password" class="form-label">password </label>
+                <p class="help is-danger" *ngIf="!form.get('password').valid && form.get('password').touched">Il campo è obbligatorio
+                </p>
+              </div>
+              </div>
+
+
+
+              <div class="d-flex flex-row align-items-center mb-4">
+                <div class="form-outline flex-fill mb-0">
+
+                <input type="password" class="form-control" name="ripetiPassword" id="password"
+                  formControlName="ripetiPassword">
+                <p class="help is-danger" *ngIf="!form.get('ripetiPassword').valid && form.get('ripetiPassword').touched">Il campo è
+                  obbligatorio</p><label for="ripetiPassword" class="form-label">ripeti password </label>
+              </div>
+              </div>
+
+
+
+              <div class="d-flex flex-row align-items-center mb-4">
+                <div class="form-outline flex-fill mb-0">
+
+                <input class="form-check-input" type="checkbox" value="" id="accetto" name="accetto" formControlName="accetto">
+                <label class="form-check-label lab" for="accetto">
+                  Dichiaro di accettare i <span class="accept">termini del servizio</span></label>
+                <p class="help is-danger" *ngIf="!form.get('accetto').valid && form.get('accetto').touched">Checkbox obbligatoria
+                </p>
+              </div>
+              </div>
+
+
+
+              <div class="d-flex flex-row align-items-center mb-4">
+                <div class="form-outline flex-fill mb-0">
+
+                <button type="submit" class="btn btn-primary bottoneSubmit" [disabled]="!form.valid">Invia</button>
+                <p class="help correct" *ngIf="form.valid">Il form è coretto! Adesso puo essere inviato.</p>
+              </div>
+              </div>
+
+            </form>
+        </div>
+        <div class="col-lg-6 d-flex align-items-center order-1 order-lg-2">
+          <img src="https://mangiobenevivobene.it/wp-content/uploads/2018/01/cucina-italiana-e1515408247298.jpg " class="img-fluid" alt="foto">
+        </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+

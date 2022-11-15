@@ -1,3 +1,4 @@
+import { RegistrazioneComponent } from './user/registrazione/registrazione.component';
 import { RecipesListComponent } from './components/recipes/recipes-list/recipes-list.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -15,6 +16,7 @@ const routes: Routes = [
     {path: 'dettaglio/:title/:_id', component: DetailComponent},
     {path:'', pathMatch: 'full', component: RecipesListComponent}
   ]},
+  {path: 'registrazione',component: RegistrazioneComponent},
 
   // {path: 'ricette',component: RecipesComponent},
  // {path: 'dettaglio/:_id', component: DetailComponent},
