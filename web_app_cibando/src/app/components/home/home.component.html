@@ -16,3 +16,20 @@
   <h2 class="h2">Le ultime ricette</h2>
   <app-recipe-card [pag] ="'home'"></app-recipe-card>
 </div>
+
+
+
+<!--MODALE DELLA REGISTRAZIONE-->
+
+<ng-template [ngIf]="nome"> <!-- solo se nome è valorizzato-->
+<div>
+  <div id="datiUtente">
+<h2 class="h">Grazie {{nome}} per esserti registrato, ecco il riempilogo dei tuoi dati</h2>
+<ul>
+  <li>Nome: <strong>{{nome}}</strong></li>
+  <li>Email: <strong>{{email}}</strong></li>
+</ul>
+<button class="btn btn-primary button" (click)="closeModal()">chiudi</button>
+</div>
+</div>
+</ng-template>

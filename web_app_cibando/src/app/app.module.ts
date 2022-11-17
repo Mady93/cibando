@@ -16,6 +16,9 @@ import { RecipeCardComponent } from './shared/recipe-card/recipe-card.component'
 import { DetailComponent } from './components/recipes/detail/detail.component';
 import { RecipesListComponent } from './components/recipes/recipes-list/recipes-list.component';
 import { RegistrazioneComponent } from './user/registrazione/registrazione.component';
+import{PasswordModule} from "primeng/password";
+import{DividerModule} from "primeng/divider";
+import{BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -28,7 +31,8 @@ import { RegistrazioneComponent } from './user/registrazione/registrazione.compo
     RecipeCardComponent,
     DetailComponent,
     RecipesListComponent,
-    RegistrazioneComponent
+    RegistrazioneComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -36,7 +40,10 @@ import { RegistrazioneComponent } from './user/registrazione/registrazione.compo
     FontAwesomeModule,
     NgbModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    DividerModule,
+    PasswordModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

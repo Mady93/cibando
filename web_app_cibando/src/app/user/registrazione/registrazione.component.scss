@@ -36,10 +36,13 @@ input.ng-valid {
 }
 
 .correct {
-  border: 1px solid green;
-  background-color: green;
-  color: white;
-  padding: 10px;
+    border: 1px solid lime;
+    background-color: green;
+    color: white;
+    /* padding: 10px; */
+    text-align: center;
+    margin-top: 15px;
+    font-size: 16px;
 }
 
 .div-check {
@@ -83,3 +86,5 @@ p {
   padding: 30px;
     margin-top: -8px;
 }
+
+

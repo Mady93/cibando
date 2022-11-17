@@ -1,25 +1,53 @@
-import { Component, OnInit ,OnDestroy,Input} from '@angular/core';
+import { Component, OnInit, OnDestroy, Input } from '@angular/core';
+import { UserServiceService } from 'src/app/services/user-service.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent implements OnInit,OnDestroy {
+export class HomeComponent implements OnInit, OnDestroy {
   evidenziato = false;
-//sfondo = 'background-color: red';
-//sfondo = 'red';
+  //sfondo = 'background-color: red';
+  //sfondo = 'red';
 
-  constructor() { }
+  nome: string;
+  email: string;
+
+  constructor(private userService: UserServiceService) {}
 
   ngOnInit(): void {
+    console.log('Sei entrato nella home');
+    this.riceviDatiUtente();
   }
 
-  onEvidenziazione(){
+  onEvidenziazione() {
     this.evidenziato = !this.evidenziato;
   }
 
-  ngOnDestroy():void{
+  riceviDatiUtente() {
+    this.userService.datiUtente.subscribe((res: any) => {
+      localStorage.setItem('nome', res.nome);
+      localStorage.setItem('email', res.email);
+    });
+    if (localStorage.getItem('nome')) {
+      this.nome = localStorage.getItem('nome');
+      this.email = localStorage.getItem('email');
+    }
+  }
+
+  closeModal() {
+    //rimozione selettiva
+    localStorage.removeItem('nome');
+    localStorage.removeItem('email');
+
+    //   //RIMUOVE Tutte
+    localStorage.clear();
+    this.nome = '';
+    this.email = '';
+  }
+
+  ngOnDestroy(): void {
     console.log('Sei uscito dalla home');
     console.log('Destroy app');
   }

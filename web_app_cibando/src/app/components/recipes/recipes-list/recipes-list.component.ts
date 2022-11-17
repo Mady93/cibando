@@ -10,11 +10,18 @@ export class RecipesListComponent implements OnInit {
 
   titoloRicevuto: string;
 
+
+
+
   constructor() { }
 
   ngOnInit(): void {
+          }
 
-  }
+
+
+
+
 //////////////////DA SAPPERE ///////////////////////////////
 
   // metodo del padre per ricevere l'output del figlio recipe-card.component.ts

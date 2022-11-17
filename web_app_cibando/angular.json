@@ -6,7 +6,8 @@
     "web_app_cibando": {
       "projectType": "application",
       "schematics": {"@schematics/angular:component": {
-        "style": "scss"},
+        "style": "scss"
+      },
         "@schematics/angular:application": {
           "strict": true
         }
@@ -29,7 +30,10 @@
             ],
             "styles": [
               "./node_modules/bootstrap/dist/css/bootstrap.css",
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/primeng/resources/themes/saga-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/primeicons/primeicons.css"
             ],
             "scripts": [
               "./node_modules/bootstrap/dist/js/bootstrap.js",
@@ -99,8 +103,11 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.scss",
-              "./node_modules/bootstrap/dist/css/bootstrap.css"
+              "node_modules/primeng/resources/themes/saga-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/primeicons/primeicons.css"
             ],
             "scripts": [
               "./node_modules/bootstrap/dist/js/bootstrap.js",
