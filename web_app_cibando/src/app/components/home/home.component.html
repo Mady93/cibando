@@ -22,6 +22,7 @@
 <!--MODALE DELLA REGISTRAZIONE-->
 
 <ng-template [ngIf]="nome"> <!-- solo se nome è valorizzato-->
+  <div id="contenitore-globale">
 <div>
   <div id="datiUtente">
 <h2 class="h">Grazie {{nome}} per esserti registrato, ecco il riempilogo dei tuoi dati</h2>
@@ -30,6 +31,7 @@
   <li>Email: <strong>{{email}}</strong></li>
 </ul>
 <button class="btn btn-primary button" (click)="closeModal()">chiudi</button>
+</div>
 </div>
 </div>
 </ng-template>
