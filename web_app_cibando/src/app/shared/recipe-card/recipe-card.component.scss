@@ -1,55 +1,65 @@
-.container-cards{
-  display:block;
+.container-fluid {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-cards {
+  display: block;
   margin-bottom: 20px;
   height: 100vh;
 
-    // display: block;
-    // margin-bottom: 20px;
-    // height: 100vh;
-    // display: flex;
-    // flex-direction: row-reverse;
-    // justify-content: flex-end;
-    // align-items: flex-start;
+  // display: block;
+  // margin-bottom: 20px;
+  // height: 100vh;
+  // display: flex;
+  // flex-direction: row-reverse;
+  // justify-content: flex-end;
+  // align-items: flex-start;
 
 
 
-  .card{
-     margin-left: 1.5%;
+  .card {
+    margin-left: 1.5%;
     float: left;
     margin-bottom: 20px;
     display: flex;
-    flex-wrap: nowrap;
-    width: 23%;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row-reverse;
+     width: 23%;
+    align-content: space-around;
+    justify-content: center;
+  }
 
-      // margin-top: 249px;
-
-}
-
-  .card-title{
+  .card-title {
     font-size: bold;
     font-size: 16px;
     color: #8e210b;
   }
 
-.card-image{
-  height: 200px;
-  //background-image: url(https://www.kikkoman.eu/fileadmin/user_upload/03-recipes/WEB_Spagetti_med_kjoettsaus.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  .card-image {
+    height: 200px;
+    //background-image: url(https://www.kikkoman.eu/fileadmin/user_upload/03-recipes/WEB_Spagetti_med_kjoettsaus.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+width: 100%;
+  }
 
-}
+  .card-text {
+    font-size: 10px;
+    text-align: justify; //mette il testo scritto a blocchetto
+    margin-bottom: 20px;
+    float: left;
+  }
 
-.card-text{
-  font-size:10px;
-  text-align: justify; //mette il testo scritto a blocchetto
-  margin-bottom: 20px;
-  float: left;
-}
-
-a.btn.btn-primary {
-background-color: #8e210b;
-}
+  a.btn.btn-primary {
+    background-color: #8e210b;
+  }
 
 }
 
@@ -61,27 +71,70 @@ div#div-button-center {
 
 
 
-@media only screen and (min-width: 650px) and (max-width: 959px){
 
-  .card {
-     width: 23%;
-  }
-}
 
-@media only screen and (min-width: 481px) and (max-width: 649px){
-  .container-cards[_ngcontent-pau-c118] {
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 650px) and (max-width: 959px) {
+
+  .container-cards {
+    // width: 48% !important;
 
     .card {
-      width: 30%;
-      margin-left: 2%;
+      width: 31% !important;
+      height: fit-content;
+      position: relative;
+      clear: revert;
     }
-}
-
-}
-
-@media only screen and (min-width: 0px) and (max-width: 480px){
-  .card {
-    width: 23%;
   }
 
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 481px) and (max-width: 649px) {
+
+  .container-cards {
+    // width: 48% !important;
+
+    .card {
+      width: 48% !important;
+      height: fit-content;
+      position: relative;
+      clear: revert;
+    }
+  }
+
+}
+
+
+
+
+
+
+
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+
+  .container-cards {
+    // width: 100% !important;
+
+    .card {
+      width: 100% !important;
+    }
+  }
 }

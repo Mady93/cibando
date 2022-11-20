@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class ContattiComponent implements OnInit {
 
   nome:string;
+  email: string;
 
   constructor(private userService: UserServiceService) { }
 
@@ -19,15 +20,18 @@ export class ContattiComponent implements OnInit {
   riceviDatiUtente() {
     this.userService.datiUtente.subscribe((res: any) => {
        this.nome = res.nome;
+       this.email = res.email;
     });
   }
 
   closeModal() {
     //rimozione selettiva
     localStorage.removeItem('nome');
+    localStorage.removeItem('emil');
 
     //   //RIMUOVE Tutte
     localStorage.clear();
     this.nome = '';
+    this.email = '';
   }
 }

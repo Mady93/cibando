@@ -1,12 +1,35 @@
 .container-title {
-  h2 {
-    font-size: 35px;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+
+  h1 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    color: #8e210b;
+    margin-top: 29px;
+    font-family: emoji;
+    font-size: 46px;
   }
 
   ;
 
   .testo {
     font-size: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
   }
 
 }
@@ -15,8 +38,15 @@
   text-align: center;
   height: 10vh;
   font-family: "Homemade Apple", cursive;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
+//REGISTRAZIONE KOOKIE
 #datiUtente {
   position: absolute;
   top: 35%;
@@ -52,10 +82,24 @@
   }
 }
 
-@media only screen and (min-width: 650px) and (max-width: 959px){
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 650px) and (max-width: 959px) {
+
   .container-title {
-    h2 {
-      font-size: 35px;
+
+    font-size: 28px;
+
+
+    h1 {
+      font-size: 32px;
     }
 
     ;
@@ -73,39 +117,98 @@
   }
 
   #datiUtente {
-    position: absolute;
-    top: 35%;
-    width: 60%;
-    height: 250px;
-    background-color: white;
-    margin-left: 20%;
-    padding: 36px;
-    border: 9px solid #8e210b !important;
-    border-radius: 20px;
-    box-sizing: border-box;
-
-
-    button.btn.btn-primary {
-      margin: auto;
-      display: block;
-      width: 25%;
-      padding: 10px;
-      margin-top: 35px;
-      background-color: #8e210b;
-
-    }
+    width: 72%;
+    height: 295px;
+    margin-left: 13%;
   }
-}
-
-
-@media only screen and (min-width: 650px) and (max-width: 959px){
 
 }
 
-@media only screen and (min-width: 481px) and (max-width: 649px){
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 481px) and (max-width: 649px) {
+
+  .container-title {
+
+    font-size: 20px;
+
+
+    h1 {
+      font-size: 28px;
+    }
+
+    ;
+
+    .testo {
+      font-size: 10px;
+    }
+
+  }
+
+  .h2 {
+    text-align: center;
+    height: 10vh;
+    font-family: "Homemade Apple", cursive;
+  }
+
+  #datiUtente {
+    width: 72%;
+    height: 358px;
+    position: absolute;
+    margin-left: 13%;
+  }
 
 }
 
-@media only screen and (min-width: 0px) and (max-width: 480px){
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+
+  .container-title {
+
+    font-size: 23px;
+
+
+    h1 {
+      font-size: 19px;
+    }
+
+    ;
+
+    .testo {
+      font-size: 10px;
+    }
+
+  }
+
+  .h2 {
+    text-align: center;
+    height: 10vh;
+    font-family: "Homemade Apple", cursive;
+  }
+
+  #datiUtente {
+    width: 78%;
+    height: 330px;
+    margin-left: 13%;
+  }
 
 }

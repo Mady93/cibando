@@ -1,4 +1,4 @@
-import { Recipe } from './../../../models/recipe.model';
+import { Recipe } from 'src/app/models/recipe.model';
 import { Component, OnInit } from '@angular/core';
 
 //####### router gestisce le rotte dalla classe

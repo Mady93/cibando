@@ -54,18 +54,13 @@ export class RegistrazioneComponent implements OnInit {
   // console.log(form);
   //   };
 
-  onSubmitHome() {
+  onSubmitHomeEContatti() {
     console.log(this.form.value);
     const utente = { nome: this.form.value.nome, email: this.form.value.email };
     this.userService.datiUtente.next(utente);
     this.router.navigate(['home']);
-  }
-
-  //aggiunto
-  onSubmitContatti(){
-    console.log(this.form.value);
-    const user = { nome: this.form.value.nome };
-    this.userService.datiUtente.next(user);
     this.router.navigate(['contatti']);
   }
+
+
 }

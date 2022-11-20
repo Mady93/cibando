@@ -1,18 +1,156 @@
-div#datiUtente {
-  margin-top: 107px;
-  margin-left: -10px;
-  width: 103.5%;
-  border: 0px solid red;
-  height: 60px;
-  background-color: brown;
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  align-content: flex-end;
-  flex-direction: row;
-  flex-wrap: wrap;
+#datiUtente {
+  position: absolute;
+  top: 35%;
+  width: 60%;
+  height: 250px;
+  background-color: white;
+  margin-left: 20%;
+  padding: 36px;
+  border: 9px solid #8e210b !important;
+  border-radius: 20px;
+  box-sizing: border-box;
+
+
+
+  .h {
+    text-align: center;
+    font-size: 23px;
+    margin-bottom: 30px;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  button.btn.btn-primary {
+    margin: auto;
+    display: block;
+    width: 25%;
+    padding: 10px;
+    margin-top: 35px;
+    background-color: #8e210b;
+
+  }
 }
 
 div#container {
-  margin-top: 20%;
+    margin-top: 5%;
+    display: block;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-top: -29px;
+
+    div#info {
+      padding: 20px;
+      color: #8e210b!important;
+      margin-top: -25px;
+
+h1#info-h1{
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  font-family: emoji;
+}
+    }
+
+      p {
+        font-size: 18px;
+        font-family: auto;
+        color: #760c0c!important;
+    }
+    }
+
+.button{
+  background-color: #760c0c!important;
+  color: white!important;
+
+}
+
+    .collapsed{
+      background-color: #b51c1c!important;
+    }
+
+
+    .ul{
+    margin-top: 0;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    display: block;
+
+.li{
+  padding: 5px;
+}
+    }
+
+
+
+
+
+@media only screen and (min-width: 650px) and (max-width: 959px) {
+
+
+  #datiUtente {
+    width: 72%;
+    height: 295px;
+    margin-left: 13%;
+  }
+
+  div#container {
+    margin-top: -15px;
+}
+
+}
+
+
+
+
+
+
+@media only screen and (min-width: 481px) and (max-width: 649px) {
+
+
+
+  #datiUtente {
+    width: 72%;
+    height: 358px;
+    position: absolute;
+    margin-left: 13%;
+  }
+
+
+  div#container {
+    margin-top: -15px;
+}
+}
+
+
+
+
+
+
+
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+
+
+  #datiUtente {
+    width: 78%;
+    height: 330px;
+    margin-left: 13%;
+  }
+
+  div#container {
+    margin-top: -5px;
+}
 }

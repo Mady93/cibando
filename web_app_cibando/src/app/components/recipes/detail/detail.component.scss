@@ -1,47 +1,57 @@
-.container-fluid{
-  display:block;
+.container-fluid {
+  display: block;
   //float:left;
   margin-bottom: 20px;
   height: 110vh;
 
-  .container-image{
+  .container-image {
     //width:23%;
     //margin-left: 1.5%;
-    float:left;
+    float: left;
     margin-bottom: 20px;
   }
-  .card-title{
+
+  .card-title {
     //font-size: bold;
-    font-size: 23px;;
+    font-size: 23px;
+    ;
     color: #8e210b;
     font-weight: bold;
     padding: 10px;
   }
 
-.card-image{
-  height: 330px;
-  //background-image: url(https://www.kikkoman.eu/fileadmin/user_upload/03-recipes/WEB_Spagetti_med_kjoettsaus.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-top: 0px;
-  margin-left: -24px;
-  margin-right: -24px;
-}
-.card-text{
-  padding: 10px;
-}
+  .card-image {
+    height: 330px;
+    //background-image: url(https://www.kikkoman.eu/fileadmin/user_upload/03-recipes/WEB_Spagetti_med_kjoettsaus.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 0px;
+    margin-left: -24px;
+    margin-right: -24px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-text {
+    padding: 10px;
+  }
 
 }
-.difficulty{
+
+.difficulty {
   font-weight: bold;
   padding: 9px;
 }
-.stelle{
+
+.stelle {
   padding-left: 10px;
 }
 
-.data{
+.data {
   padding: 10px;
   margin-left: 84%;
 }
@@ -50,19 +60,18 @@
   --bs-gutter-x: 1.5rem;
 }
 */
-.difficult{
-  width:160px;
-  margin-top:10px;
+.difficult {
+  width: 160px;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 
-.error{
-text-align: center;
-height: 70vh;
+.error {
+  text-align: center;
+  height: 70vh;
 
-h4{
-  position: relative;
-  top:50%;
+  h4 {
+    position: relative;
+    top: 50%;
+  }
 }
-}
-

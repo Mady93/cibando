@@ -141,7 +141,7 @@
 
                                            <!--MODIFICATO (ngSubmit)="onSubmitContatti()"-->
 
-              <form class="mx-md-4" [formGroup]="form" (ngSubmit)="onSubmitHome()" (ngSubmit)="onSubmitContatti()">
+              <form class="mx-md-4" [formGroup]="form" (ngSubmit)="onSubmitHomeEContatti()">
 
 
 
@@ -196,7 +196,7 @@
                   <div class="form-outline flex-fill mb-0">
 
                     <label for="nome" class="form-label">data di nascita </label>
-                    <input type="date" class="form-control" name="dataNascita" id="codiceFiscale"
+                    <input type="date" class="form-control" name="dataNascita" id="dataNascita"
                       formControlName="dataNascita">
                     <!-- <p class="help is-danger" *ngIf="form.controls['dataNascita'].hasError('required')">Il campo è obbligatorio</p> -->
                     <p class="help is-danger"
@@ -284,8 +284,9 @@
               </form>
             </div>
             <div class="col-lg-6 d-flex align-items-center order-1 order-lg-2">
-              <img src="https://mangiobenevivobene.it/wp-content/uploads/2018/01/cucina-italiana-e1515408247298.jpg "
-                class="img-fluid" alt="foto">
+              <img src="https://www.iodonna.it/wp-content/uploads/2018/08/Insalata-di-pasta-verticale-768x1024.jpg " class="img-fluid" alt="foto">
+              <!-- <img src="https://mangiobenevivobene.it/wp-content/uploads/2018/01/cucina-italiana-e1515408247298.jpg "
+                class="img-fluid" alt="foto"> -->
             </div>
           </div>
         </div>

@@ -3,17 +3,20 @@
 
 <div class="container-cards" id="div-card">
 
-  <!-- div paginazione-->
+
+                               <!-- div paginazione-->
+
   <div class="container-pagination" *ngIf="pag !='home'">
     <div class="div-h5-titleRicettePerPagina">
       <h5><strong>{{ricettePerPagina}}</strong> ricette su un totale di <strong>{{ricette.length}}</strong> ricette</h5>
-      <h5>Pagina corrente <strong>{{page}}</strong></h5>
+      <h5 class="sotto-titolo">Pagina corrente <strong>{{page}}</strong></h5>
     </div>
     <ngb-pagination [collectionSize]="ricette.length *2 +(ricettePerPagina *2)" [(page)]="page" aria-label="Default pagination">
 
     </ngb-pagination>
   </div>
-<!-- finito div paginazione -->
+
+
 
 <!-- aggiunte lo slice nel *ngFor -->
   <div class="card" *ngFor="let recipe of ricette | slice: (page * ricettePerPagina) - ricettePerPagina: page * ricettePerPagina">

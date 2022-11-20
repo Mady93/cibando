@@ -1,10 +1,19 @@
 .p{
-  padding:1%;
+  padding: 1%;
+    color: #8e210b;
+    margin-top: 29px;
+    font-family: emoji;
+    font-size: 40px;
 }
 
 .strong{
-  margin-left: 39%;
-  padding: 1%;
+    padding: 1%;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    text-align: center;
 }
 
 .strong-div{
