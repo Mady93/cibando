@@ -28,3 +28,28 @@ header{
   }
 }
 
+button.btn.btn-outline-success {
+  display: block;
+    position: relative;
+    top: -37px;
+    height: 40px;
+    border-color: white;
+    margin-left: 488%;
+}
+
+button.btn.btn-outline-success:hover {
+  background-color: #c0820d;
+}
+
+input.search {
+  margin-right: 10px;
+    height: 36px;
+    margin-top: 5px;
+    padding-left: 10px;
+    border: 0px;
+    border-radius: 3px;
+    margin-left: 388%;
+    text-align: center;
+}
+
+

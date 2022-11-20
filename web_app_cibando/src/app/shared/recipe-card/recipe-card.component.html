@@ -1,15 +1,35 @@
+
+                          <!-- figlio di recipe-list -->
+
 <div class="container-cards" id="div-card">
-  <div class="card" *ngFor="let recipe of ricette">
+
+  <!-- div paginazione-->
+  <div class="container-pagination" *ngIf="pag !='home'">
+    <div class="div-h5-titleRicettePerPagina">
+      <h5><strong>{{ricettePerPagina}}</strong> ricette su un totale di <strong>{{ricette.length}}</strong> ricette</h5>
+      <h5>Pagina corrente <strong>{{page}}</strong></h5>
+    </div>
+    <ngb-pagination [collectionSize]="ricette.length *2 +(ricettePerPagina *2)" [(page)]="page" aria-label="Default pagination">
+
+    </ngb-pagination>
+  </div>
+<!-- finito div paginazione -->
+
+<!-- aggiunte lo slice nel *ngFor -->
+  <div class="card" *ngFor="let recipe of ricette | slice: (page * ricettePerPagina) - ricettePerPagina: page * ricettePerPagina">
     <div class="card-image" [ngStyle]="{'background-image': 'url(' + recipe.image + ')'}" (click)="inviaTitolo(recipe.title)">
     </div>
     <div class="card-body" >
       <h5 class="card-title">{{recipe.title}}</h5>
       <p class="card-text">{{recipe.description | slice: 0:250}}...</p>
       <div id="div-button-center">
-        <!--<a class="btn btn-primary" routerLink="/dettaglio/{{recipe._id}}">Visualizza</a>-->
         <a class="btn btn-primary" routerLink="/ricette/dettaglio/{{recipe.title}}/{{recipe._id}}">Visualizza</a>
-        <!--<a class="btn btn-primary" [routerLink]=" 'dettaglio/' + recipe.title +'/'+ recipe._id">Visualizza</a>-->
       </div>
     </div>
   </div>
+  <div class="container-pagination2" *ngIf="pag !='home'">
+    <ngb-pagination [collectionSize]="ricette.length *2 + (ricettePerPagina *2)" [(page)]="page" aria-label="Default pagination">
+    </ngb-pagination>
+  </div>
 </div>
+

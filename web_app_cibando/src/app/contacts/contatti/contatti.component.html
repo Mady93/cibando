@@ -1,0 +1,50 @@
+<!--MODALE DELLA REGISTRAZIONE-->
+<div>
+  <div id="container">
+<h1>Informazioni azienda:</h1>
+<ul>
+  <li>
+    <p>Per ordini chiama il numero: 892.890
+
+      Orario:
+
+      Lunedì - Venerdì 08.00 - 22.00
+      Sabato 08.00 - 20.00
+      Domenica 09.00 - 19.00
+      Rete fissa: tariffa unica senza scatto alla risposta solo 0,18 € al minuto (IVA inclusa) da tutta Italia
+      Cellulare: Tariffa massima (IVA inclusa) 0,73 € al minuto + 0,18 € di scatto alla risposta. Per ulteriori informazioni, contatta il tuo gestore.
+
+      Per informazioni puoi chiamarci anche al: 015/88.88.8
+
+      Alle tariffe previste dal tuo gestore telefonico.</p>
+  </li>
+  <li>
+    <p>Per ordini e informazioni scrivi all'email:
+      bonprix s.r.l.
+      Servizio Clienti
+      C.P. 58
+      13900 BIELLA (BI)</p>
+  </li>
+  <li>
+    <p>
+      Per ordini e informazioni invia un fax al numero: 015 / 88.88.200
+    </p>
+  </li>
+</ul>
+  </div>
+
+
+<ng-template [ngIf]="nome"> <!-- solo se nome è valorizzato-->
+  <div id="contenitore-globale">
+<div>
+  <div id="datiUtente">
+<h2 class="h">Benvenuto {{nome}}</h2>
+<ul>
+  <li>Nome: <strong>Ciao</strong></li>
+</ul>
+<button class="btn btn-primary button" (click)="closeModal()">chiudi</button>
+</div>
+</div>
+</div>
+</ng-template>
+</div>

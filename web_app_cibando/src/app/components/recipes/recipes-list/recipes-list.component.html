@@ -1,8 +1,10 @@
-<p class="p">Le nostre ricette</p>
+<p class="p"><strong>Le nostre ricette</strong></p>
 <!--Per immettere recipes deve essere input-->
 
   <div class="strong-div">
   <p *ngIf="titoloRicevuto" class="strong"> Hai cliccato la ricetta: <strong>{{titoloRicevuto}}</strong></p>
  </div>
 
+ <div class="recipe-card">
 <app-recipe-card [pag] ="'ricette'" (messaggio)="riceviTitolo($event)"></app-recipe-card>
+</div>

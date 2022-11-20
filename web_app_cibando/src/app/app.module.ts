@@ -20,6 +20,9 @@ import{PasswordModule} from "primeng/password";
 import{DividerModule} from "primeng/divider";
 import{BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
+import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
+import { ContattiComponent } from './contacts/contatti/contatti.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +35,7 @@ import{BrowserAnimationsModule} from "@angular/platform-browser/animations";
     DetailComponent,
     RecipesListComponent,
     RegistrazioneComponent,
+    ContattiComponent,
 
   ],
   imports: [
@@ -43,7 +47,8 @@ import{BrowserAnimationsModule} from "@angular/platform-browser/animations";
     ReactiveFormsModule,
     DividerModule,
     PasswordModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgbCollapseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

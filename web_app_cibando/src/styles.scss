@@ -1,66 +1,72 @@
 @import '~bootstrap/scss/bootstrap';
 @import "../node_modules/bootstrap/dist/css/bootstrap.css";
 
-body{
+body {
   font-family: 'Montserrat', sans-serif;
 }
 
-footer{
+footer {
   height: 100px;
-  width:100%;
-  background-color:#8e210b;
+  width: 100%;
+  background-color: #8e210b;
+  display: flex;
+  flex-direction: column;
 }
 
 
 
-#main-container{
+
+#main-container {
   padding: 15px; //spazio a destra e sinistra
-p{
-text-align: justify; //testo giustificato, no sinistra o destra
-font-size: 21px;
-}
+
+  p {
+    text-align: justify; //testo giustificato, no sinistra o destra
+    font-size: 21px;
+  }
 }
 
-.testo-evidenziato{
+.testo-evidenziato {
   background-color: yellow;
   width: 548px;
 }
 
-.variabilePercorso2{
+.variabilePercorso2 {
   margin-top: -19px; // attacca l'img alla navbar
   margin-bottom: 20px;
 }
 
 
 //Stili Bootstrap per Carousel
-ngb-carousel.carousel.slide{
-margin-top: -19px; // attacca l'img alla navbar
-margin-bottom: 20px;
+ngb-carousel.carousel.slide {
+  margin-top: -19px; // attacca l'img alla navbar
+  margin-bottom: 20px;
 
 
-.carousel-caption{
-  top: 26rem;
+  .carousel-caption {
+    top: 26rem;
 
-  h3{
-    font-family: "Homemade Apple",cursive;
-    font-size: 40px;
-    text-shadow: black 2px 3px 3px; // x,y e sfogatura
+    h3 {
+      font-family: "Homemade Apple", cursive;
+      font-size: 40px;
+      text-shadow: black 2px 3px 3px; // x,y e sfogatura
+    }
+
+    h2 {
+      font-size: 20px;
+      text-shadow: black 2px 2px 3px;
+      font-weight: lighter;
+    }
+
   }
-
-  h2{
-    font-size: 20px;
-    text-shadow: black 2px 2px 3px;
-    font-weight: lighter;
-  }
-
-}
 }
 
-.carousel-control-next-icon, .carousel-control-prev-icon{
-opacity: 1, im !important;
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  opacity: 1, im !important;
 }
 
-.carousel-control-next-icon, .carousel-control-prev-icon{
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
   width: 4rem;
   height: 4rem;
 }
@@ -72,28 +78,30 @@ app-recipes {
   display: flex;
 }
 
-.-password{
-  display: block!important;
+.-password {
+  display: block !important;
 }
 
-.p-inputtext{
-  width:100%!important;
+.p-inputtext {
+  width: 100% !important;
 }
 
-.p-password-input{
-  width:100%!important;
+.p-password-input {
+  width: 100% !important;
 }
 
 
 
 .p-password {
-  display: block!important;
+  display: block !important;
 }
+
 .p-inputtext {
-  width: 100%!important;
+  width: 100% !important;
 }
+
 .p-password-input {
-  width: 100%!important;
+  width: 100% !important;
 }
 
 .ng-tns-c61-0.pi.pi-eye.ng-star-inserted {
@@ -112,5 +120,167 @@ div#contenitore-globale {
   padding: 0;
 }
 
-/* Importing Bootstrap SCSS file. */
+
+
+
+//recipe-card paginazione
+.container-pagination {
+  text-align: center;
+}
+
+ul.pagination {
+  margin-left: 44%;
+  padding: 3px;
+}
+
+.div-h5-titleRicettePerPagina {
+  padding: 25px;
+}
+
+p.p {
+  text-align: center;
+  font-size: 33px;
+}
+
+
+
+.container-pagination2 {
+  margin-right: 2%;
+}
+
+li.page-item {
+  color: white !important;
+  background-color: red !important;
+}
+
+
+//  div#supercontenitore{
+//    max-width: 1400px;
+//    margin: auto
+//  }
+
+
+/*@media only screen and (min-width: 650px) and (max-width: 959px){
+  footer{
+    height: 100px;
+    width:100%;
+    background-color:#8e210b;
+  }
+
+  div#contenitore-globale {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 10;
+    background-color: #000000b0;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 649px){
+  footer{
+    height: 100px;
+    width:100%;
+    background-color:#8e210b;
+  }
+
+  div#contenitore-globale {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 10;
+    background-color: #000000b0;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 480px){
+  footer{
+    height: 100px;
+    width:100%;
+    background-color:#8e210b;
+  }
+
+  div#contenitore-globale {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 10;
+    background-color: #000000b0;
+    margin: 0;
+    padding: 0;
+  }
+}*/
+
+.navbar-toggler {
+  margin-right: 20px;
+}
+
+// DA QUI HO AGGIUNTO I DISPLAY:FLEX;
+
+
+
+// ----------- Home ------------
+
+
+ngb-carousel.carousel.slide .carousel-caption h3,
+ngb-carousel.carousel.slide .carousel-caption .h3 {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+// #main-container p {
+//   display: flex;
+//   flex-direction: row-reverse;
+//   align-items: center;
+//   flex-wrap: nowrap;
+//   justify-content: flex-end;
+// }
+
+.h2[_ngcontent-cgq-c120] {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+// ------------------------------   Footer ---------------------------
+
+@media only screen and (min-width: 650px) and (max-width: 959px){
+
+}
+
+@media only screen and (min-width: 481px) and (max-width: 649px){
+
+}
+
+@media only screen and (min-width: 0px) and (max-width: 480px){
+  footer {
+    width: 106%;
+}
+
+ul.pagination {
+  margin-left: 33%;
+  padding: 3px;
+
+}
+}
+
+
+
+
+
+
+
+
+
 @import '~bootstrap/scss/bootstrap';

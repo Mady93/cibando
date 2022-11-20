@@ -9,13 +9,7 @@ import { UserServiceService } from 'src/app/services/user-service.service';
   selector: 'app-registrazione',
   templateUrl: './registrazione.component.html',
   styleUrls: ['./registrazione.component.scss'],
-  // styles: [
-  //     `
-  //       :host ::ng-deep .p-password input {
-  //         width: 15rem;
-  //       }
-  //     `
-  //   ]
+
 })
 export class RegistrazioneComponent implements OnInit {
   regex = /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,16}$/;
@@ -60,10 +54,18 @@ export class RegistrazioneComponent implements OnInit {
   // console.log(form);
   //   };
 
-  onSubmit() {
+  onSubmitHome() {
     console.log(this.form.value);
     const utente = { nome: this.form.value.nome, email: this.form.value.email };
     this.userService.datiUtente.next(utente);
     this.router.navigate(['home']);
+  }
+
+  //aggiunto
+  onSubmitContatti(){
+    console.log(this.form.value);
+    const user = { nome: this.form.value.nome };
+    this.userService.datiUtente.next(user);
+    this.router.navigate(['contatti']);
   }
 }

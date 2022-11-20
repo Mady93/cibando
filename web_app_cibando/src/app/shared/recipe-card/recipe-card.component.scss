@@ -1,15 +1,30 @@
 .container-cards{
   display:block;
-  //float:left;
   margin-bottom: 20px;
   height: 100vh;
 
+    // display: block;
+    // margin-bottom: 20px;
+    // height: 100vh;
+    // display: flex;
+    // flex-direction: row-reverse;
+    // justify-content: flex-end;
+    // align-items: flex-start;
+
+
+
   .card{
-    width:23%;
-    margin-left: 1.5%;
-    float:left;
+     margin-left: 1.5%;
+    float: left;
     margin-bottom: 20px;
-  }
+    display: flex;
+    flex-wrap: nowrap;
+    width: 23%;
+
+      // margin-top: 249px;
+
+}
+
   .card-title{
     font-size: bold;
     font-size: 16px;
@@ -31,12 +46,42 @@
   margin-bottom: 20px;
   float: left;
 }
+
 a.btn.btn-primary {
 background-color: #8e210b;
 }
+
 }
+
 div#div-button-center {
   padding-left: 33%;
   /* padding: 35%; */
   padding-top: 11%;
+}
+
+
+
+@media only screen and (min-width: 650px) and (max-width: 959px){
+
+  .card {
+     width: 23%;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 649px){
+  .container-cards[_ngcontent-pau-c118] {
+
+    .card {
+      width: 30%;
+      margin-left: 2%;
+    }
+}
+
+}
+
+@media only screen and (min-width: 0px) and (max-width: 480px){
+  .card {
+    width: 23%;
+  }
+
 }

@@ -138,7 +138,10 @@
               <h1 class="text-center h1 fw-bold mb-5 mx-md-4 mt-4">Registrati</h1>
 
 
-              <form class="mx-md-4" [formGroup]="form" (ngSubmit)="onSubmit()">
+
+                                           <!--MODIFICATO (ngSubmit)="onSubmitContatti()"-->
+
+              <form class="mx-md-4" [formGroup]="form" (ngSubmit)="onSubmitHome()" (ngSubmit)="onSubmitContatti()">
 
 
 
