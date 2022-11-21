@@ -7,7 +7,7 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import{ HttpClientModule} from '@angular/common/http'
 
 import { AppComponent } from './app.component';
-import { CarouselComponent } from './components/carousel/carousel.component';
+import { CarouselComponent } from './components/home/carousel/carousel.component';
 import { RecipesComponent } from './components/recipes/recipes.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
@@ -21,8 +21,7 @@ import{DividerModule} from "primeng/divider";
 import{BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
-import { ContattiComponent } from './contacts/contatti/contatti.component';
-import { SearchComponent } from './components/search/search/search.component';
+import { ContattiComponent } from './components/contatti/contatti.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +36,6 @@ import { SearchComponent } from './components/search/search/search.component';
     RecipesListComponent,
     RegistrazioneComponent,
     ContattiComponent,
-    SearchComponent,
 
   ],
   imports: [

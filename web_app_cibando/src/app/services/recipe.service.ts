@@ -12,7 +12,7 @@ export class RecipeService {
 
   apiBaseUrl = "api/recipes";
 
-  ricercaCampoSearchNavbar = new ReplaySubject();
+
 
 
   constructor(private http: HttpClient) { }
