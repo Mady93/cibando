@@ -4,7 +4,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
-
+import{ HttpClientModule} from '@angular/common/http'
 
 import { AppComponent } from './app.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
@@ -22,6 +22,7 @@ import{BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 import { ContattiComponent } from './contacts/contatti/contatti.component';
+import { SearchComponent } from './components/search/search/search.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { ContattiComponent } from './contacts/contatti/contatti.component';
     RecipesListComponent,
     RegistrazioneComponent,
     ContattiComponent,
+    SearchComponent,
 
   ],
   imports: [
@@ -48,7 +50,8 @@ import { ContattiComponent } from './contacts/contatti/contatti.component';
     DividerModule,
     PasswordModule,
     BrowserAnimationsModule,
-    NgbCollapseModule
+    NgbCollapseModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

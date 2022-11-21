@@ -1,3 +1,4 @@
+import { SearchComponent } from './components/search/search/search.component';
 import { ContattiComponent } from './contacts/contatti/contatti.component';
 import { RegistrazioneComponent } from './user/registrazione/registrazione.component';
 import { RecipesListComponent } from './components/recipes/recipes-list/recipes-list.component';
@@ -21,6 +22,8 @@ const routes: Routes = [
     {path: 'registrazione',component: RegistrazioneComponent},
 
    {path: 'contatti',component: ContattiComponent},
+
+   {path: 'search', component:SearchComponent},
 
   // {path: 'ricette',component: RecipesComponent},
  // {path: 'dettaglio/:_id', component: DetailComponent},

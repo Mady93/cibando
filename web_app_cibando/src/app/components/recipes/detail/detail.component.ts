@@ -32,7 +32,7 @@ export class DetailComponent implements OnInit {
 
   onGetRecipe(): void {
     const id = Number(this.activatedRoute.snapshot.paramMap.get('_id'));
-    this.recipeService.getRecipe(id).subscribe({
+    this.recipeService.getRecipe('_id').subscribe({
       next: (res) => {
         this.ricetta = res;
         console.log(this.ricetta);
@@ -46,9 +46,9 @@ export class DetailComponent implements OnInit {
   onGetRecipe2():void{
     this.activatedRoute.params.subscribe((urlParams)=>{
       const id = urlParams['_id'];
-      const idN = Number(id);
-      if(idN){
-      this.recipeService.getRecipe(idN).subscribe(res => this.ricetta = res);
+      // const idN = Number(id);
+      if(id){
+      this.recipeService.getRecipe(id).subscribe(res => this.ricetta = res);
   }
 });
   }
