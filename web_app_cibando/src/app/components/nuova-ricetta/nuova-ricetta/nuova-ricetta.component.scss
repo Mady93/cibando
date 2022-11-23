@@ -5,6 +5,8 @@ input.ng-valid{
   border: 2px solid rgb(0, 255, 0);
 }
 
+
+
 #contenitore-globale{
   position: fixed;
  width: 100%;
@@ -16,17 +18,18 @@ input.ng-valid{
  padding: 0;
  text-align: center;
 
+
  .card-congratulazioni{
-  background-color: white;
-  margin-top: 60px;
-  width: 40%;
+  background-color: #e7d7d7;
+    margin-top: 60px;
+  width: 42%;
   margin-left: 30%;
   border-radius: 20px;
-  border: 2px solid #8e210b;
+  border-radius: 8%;
 
   .congratulazioni{
     margin-top: 25px;
-    color:  #8e210b;
+    color: darkgreen!important;
     margin-bottom: 20px;
    }
 
@@ -48,7 +51,7 @@ input.ng-valid{
     .card-title{
       font-weight: bold;
       font-size: 25px;
-      color: #8e210b;
+      color: darkgreen!important;
     }
 
     .card-text{
@@ -75,8 +78,7 @@ input.ng-valid{
   .bottone-nuova{
     color: white;
     margin-bottom: 10px;
-    background-color: #8e210b;
-    border: solid #8e210b;
+    color: darkgreen!important;
     border-radius: 20px;
     width: 200px;
 
@@ -91,11 +93,19 @@ input.ng-valid{
   text-align: center;
   color: white;
   margin-bottom: 10px;
-  background-color: #8e210b;
-  border: solid #8e210b;
+  color: darkgreen!important;
   border-radius: 20px;
   height: 30px;
   margin-right: 69px;
   max-width: 28px;
  }
+
+ p.card-text {
+  font-size: 16px!important;
+  color: darkgreen!important;
+}
+
+.card-image {
+  height: 190px!important;
+}
 }

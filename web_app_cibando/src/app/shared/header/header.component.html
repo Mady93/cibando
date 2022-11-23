@@ -16,12 +16,17 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="contatti"><fa-icon [icon]="iconaMail"></fa-icon>Contatti</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link " routerLink="registrazione"><fa-icon [icon]="iconaRegistered"></fa-icon>Registrati</a>
+        <li class="nav-item accedi" *ngIf="!authService.isLogged()">
+          <a class="nav-link " routerLink="login">
+            <i class="pi pi-users"></i>Accedi</a>
+          <!--prine ng-->
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link " routerLink="nuova-ricetta"><fa-icon [icon]="nuovaRicetta"></fa-icon>Aggiungi ricetta</a>
+        <li class="nav-item" *ngIf="authService.isLogged()">
+          <i class="pi pi-users"></i><span class="name">Ciao {{user.name}}</span>
+          <span *ngIf="user.role === 'admin'"><i class="pi pi-plus"></i><a routerLink="nuova-ricetta">Nuova ricetta</a></span>
+          <a (click)="logOut()">Esci</a>
+          <!--prine ng-->
         </li>
 
         <li>

@@ -4,14 +4,14 @@ const Users = db.users;
 // Create and Save a new Tutorial
 exports.create = (req, res) => {
   // Validate request
-  if (!req.body.name) {
+  if (!req.body.nome) {
     res.status(400).send({ message: "Content can not be empty!" });
     return;
   }
 
   // Create new user
   const users = new Users({
-    name: req.body.name,
+    nome: req.body.nome,
     email: req.body.email,
     password: req.body.password,
     role: req.body.role ? req.body.role : 'user'

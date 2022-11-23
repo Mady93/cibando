@@ -1,0 +1,20 @@
+<div id="contenitore">
+<form #form="ngForm" (ngSubmit)="onSubmit(form.value)">
+  <div class="form-outline mb-4">
+<label class="form-label" for="email">Email/Username</label>
+<input type="text" name="email" class="form-control" placeholder="scrivi la tua email o il tuo username" ngModel>
+  </div>
+
+  <div class="form-outline mb-4">
+    <label class="form-label" for="password">Password</label>
+    <p-password [toggleMask]="true" class="form-control" name="password"
+    [feedback]="false" ngModel></p-password>
+  </div>
+  <button class="btn btn-primary btn-block mb-4">Accedi</button>
+  <div class="alert alert-danger" role="alert" *ngIf="loginError">{{loginError}}</div>
+</form>
+</div>
+<p-toast position="button-right"></p-toast>
+<div class="link-registrazione">
+  Se non sei ancora registrato <a routerLink="/registrazione">clicka qui per registrarti</a>
+</div>

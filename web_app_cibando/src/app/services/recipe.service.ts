@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
-//importiamo sia il modello sia il mock
 import { Recipe } from '../models/recipe.model';
-import { RECIPES } from './../mocks/recipes.mock';
-import{ Observable,of, ReplaySubject, Subscription } from 'rxjs'; // of  si usa con i file mock per simulare le chiamate
+// import { RECIPES } from './../mocks/recipes.mock';
+import{ Observable,of, ReplaySubject} from 'rxjs'; // of  si usa con i file mock per simulare le chiamate
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -12,13 +11,14 @@ export class RecipeService {
 
   apiBaseUrl = "api/recipes"; //function get<Recipe>
 
-  nuovaRicettaService = new ReplaySubject(); // pag nuova ricetta cookie
+  // nuovaRicettaService = new ReplaySubject(); // pag nuova-ricetta popup
 
+  create = new ReplaySubject();
 
   constructor(private http: HttpClient) { }
 
   //prendo tutte le ricette
-  getRecipes(): Observable <Recipe[]>{
+  getRecipes(){
 // return of (RECIPES);   // -->mock commentato
 
                       //prendere il metodo get da routes server
@@ -46,9 +46,11 @@ getRecipe(id: string):Observable<Recipe>{
 
 
   //crea ricetta - componente nuova-ricetta.ts
-postRecipe(form:Recipe): Observable<Object>{
-return this.http.post(`${this.apiBaseUrl}/`,form);
+postRecipe(form:any): Observable<Recipe>{
+return this.http.post<Recipe>(`${this.apiBaseUrl}/`,form);
 }
+
+
   }
 
 

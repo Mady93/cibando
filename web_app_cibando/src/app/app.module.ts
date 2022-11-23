@@ -5,6 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import{ HttpClientModule} from '@angular/common/http'
+import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
+import{BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import{DividerModule} from "primeng/divider";
+import{PasswordModule} from "primeng/password";
+import{ToastModule} from 'primeng/toast';
+import { MessageService } from 'primeng/api';
 
 import { AppComponent } from './app.component';
 import { CarouselComponent } from './components/home/carousel/carousel.component';
@@ -16,13 +22,9 @@ import { RecipeCardComponent } from './shared/recipe-card/recipe-card.component'
 import { DetailComponent } from './components/recipes/detail/detail.component';
 import { RecipesListComponent } from './components/recipes/recipes-list/recipes-list.component';
 import { RegistrazioneComponent } from './user/registrazione/registrazione.component';
-import{PasswordModule} from "primeng/password";
-import{DividerModule} from "primeng/divider";
-import{BrowserAnimationsModule} from "@angular/platform-browser/animations";
-
-import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 import { ContattiComponent } from './components/contatti/contatti.component';
 import { NuovaRicettaComponent } from './components/nuova-ricetta/nuova-ricetta/nuova-ricetta.component';
+import { LoginComponent } from './components/components/user/login/login.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,7 @@ import { NuovaRicettaComponent } from './components/nuova-ricetta/nuova-ricetta/
     RegistrazioneComponent,
     ContattiComponent,
     NuovaRicettaComponent,
+    LoginComponent
 
   ],
   imports: [
@@ -51,9 +54,10 @@ import { NuovaRicettaComponent } from './components/nuova-ricetta/nuova-ricetta/
     PasswordModule,
     BrowserAnimationsModule,
     NgbCollapseModule,
-    HttpClientModule
+    HttpClientModule,
+    ToastModule,
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

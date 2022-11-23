@@ -11,7 +11,7 @@
               <h1 class="text-center h1 fw-bold mb-5 mx-md-4 mt-4">Nuova Ricetta</h1>
 
 
-
+                                      <!--onSubmit('form.value')-->
               <form class="mx-md-4" [formGroup]="form" (ngSubmit)="onSubmit()">
 
 
@@ -53,10 +53,8 @@
                   <div class="form-outline flex-fill mb-0">
 
                     <label for="nome" class="form-label">difficulty</label>
-                    <input type="text" class="form-control" name="difficulty" id="difficulty"
-                      formControlName="difficulty">
-                    <p class="help is-danger" *ngIf="form.controls['difficulty'].hasError('maxlength')">Il difficulty
-                      deve contenere un numero</p>
+                    <input type="number" class="form-control" name="difficulty" id="difficulty"
+                      formControlName="difficulty" size="1">
                     <p class="help is-danger" *ngIf="!form.controls.difficulty.valid && form.get('difficulty').touched">
                       Il campo è obbligatorio</p>
                   </div>
@@ -78,7 +76,7 @@
                 <div class="d-flex flex-row align-items-center mb-4">
                   <div class="form-outline flex-fill mb-0">
 
-                    <input class="form-check-input" type="checkbox" value="" id="published" name="published"
+                    <input class="form-check-input" type="checkbox" value="true" id="published" name="published"
                       formControlName="published">
                     <label class="form-check-label lab" for="published">
                       Published</label>
@@ -105,12 +103,12 @@
 
 
 
-
-<ng-template [ngIf]="modal">
+<!--
+<ng-template [ngIf]="modale">
   <div id="contenitore-globale">
     <div class="card-congratulazioni">
       <div class="congratulazioni">
-        <h2>Congratulazioni! Ecco a te l'anteprima della tua ricetta inserita</h2>
+        <h2>Congratulazioni! Anteprima ricetta inserita</h2>
       </div>
       <div class="container-card">
         <div class="card">
@@ -123,9 +121,9 @@
         </div>
        </div>
        <button class="btn bottone-nuova" cursor="pointer" (click)="nuovaRicetta()">nuova ricetta</button>
-       <button class="btn exit" cursor="pointer" (click)="vaiRicette()">
+       <button class="btn exit" cursor="pointer" (click)="andareRicette()">
          <i class="pi pi-times-circle"></i>
        </button>
        </div>
       </div>
-    </ng-template>
+    </ng-template> -->

@@ -18,7 +18,6 @@ export class RecipeCardComponent implements OnInit {
   percorsoDifficolta = '/../../../src/assets/img/difficolta-';
 
   //var ricette per gestisce le pagine
-   ricette: Recipe[] = [];
    page = 1;
   ricettePerPagina = 4;
   pagingNumber = 0;
@@ -81,13 +80,12 @@ export class RecipeCardComponent implements OnInit {
   //metodo che gestisce le pagine
   pagine() {
     let tot;
-    if (this.ricette) {
-      tot = this.ricette.length;
+    if (this.totRicette) {
+      tot = this.totRicette.length;
     }
     this.page = 1;
     this.pagingNumber = 0;
     this.pagingNumber = Math.ceil(
-      this.ricette.length / this.ricettePerPagina / 4
-    ); //quante pag deve generare
+      this.totRicette?.length / this.ricettePerPagina / 4); //quante pag deve generare
   }
 }

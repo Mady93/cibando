@@ -8,10 +8,10 @@
 
   <div class="container-pagination" *ngIf="pag !='home'">
     <div class="div-h5-titleRicettePerPagina">
-      <h5><strong>{{ricettePerPagina}}</strong> ricette su un totale di <strong>{{totRicette.length}}</strong> ricette</h5>
+      <h5><strong>{{ricettePerPagina}}</strong> ricette su un totale di <strong>{{totRicette?.length}}</strong> ricette</h5>
       <h5 class="sotto-titolo">Pagina corrente <strong>{{page}}</strong></h5>
     </div>
-    <ngb-pagination [collectionSize]="totRicette.length *2 +(ricettePerPagina *2)" [(page)]="page" aria-label="Default pagination">
+    <ngb-pagination [collectionSize]="totRicette?.length *2 +(ricettePerPagina *2)" [(page)]="page" aria-label="Default pagination">
 
     </ngb-pagination>
   </div>
@@ -31,7 +31,7 @@
     </div>
   </div>
   <div class="container-pagination2" *ngIf="pag !='home'">
-    <ngb-pagination [collectionSize]="totRicette.length *2 + (ricettePerPagina *2)" [(page)]="page" aria-label="Default pagination">
+    <ngb-pagination [collectionSize]="totRicette?.length *2 + (ricettePerPagina *2)" [(page)]="page" aria-label="Default pagination">
     </ngb-pagination>
   </div>
 </div>

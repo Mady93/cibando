@@ -9,7 +9,6 @@ import { UserServiceService } from 'src/app/services/user-service.service';
   selector: 'app-registrazione',
   templateUrl: './registrazione.component.html',
   styleUrls: ['./registrazione.component.scss'],
-
 })
 export class RegistrazioneComponent implements OnInit {
   regex = /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,16}$/;
@@ -40,7 +39,10 @@ export class RegistrazioneComponent implements OnInit {
     [CustomValidators.confrontaPassword('password', 'ripetiPassword')]
   );
 
-  constructor(private userService: UserServiceService , private router: Router) {}
+  constructor(
+    private userService: UserServiceService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {}
 
@@ -54,13 +56,17 @@ export class RegistrazioneComponent implements OnInit {
   // console.log(form);
   //   };
 
-  onSubmitHomeEContatti() {
+  onSubmit() {
     console.log(this.form.value);
     const utente = { nome: this.form.value.nome, email: this.form.value.email };
     this.userService.datiUtente.next(utente);
+    this.userService.nuovoUtente(this.form.value).subscribe({
+      next: (res) => {
+        console.log(res);
+      },
+      error: (err) => console.log(err),
+    });
     this.router.navigate(['home']);
-    this.router.navigate(['contatti']);
+    // this.router.navigate(['contatti']);
   }
-
-
 }

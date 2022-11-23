@@ -1,3 +1,4 @@
+import { LoginComponent } from './components/components/user/login/login.component';
 import { NuovaRicettaComponent } from './components/nuova-ricetta/nuova-ricetta/nuova-ricetta.component';
 import { ContattiComponent } from './components/contatti/contatti.component';
 import { RegistrazioneComponent } from './user/registrazione/registrazione.component';
@@ -9,30 +10,37 @@ import { HomeComponent } from './components/home/home.component';
 import { RecipesComponent } from './components/recipes/recipes.component';
 import { DetailComponent } from './components/recipes/detail/detail.component';
 
-
-
 const routes: Routes = [
-  {path:'',redirectTo: 'home',pathMatch:'full'},
-  {path: 'home',component: HomeComponent},
-  {path:'ricette',component: RecipesComponent,children: [
-    {path: 'dettaglio/:title/:_id', component: DetailComponent},
-    {path:'', pathMatch: 'full', component: RecipesListComponent}
-  ]},
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  {
+    path: 'ricette',
+    component: RecipesComponent,
+    children: [
+      { path: 'dettaglio/:title/:_id', component: DetailComponent },
+      { path: '', pathMatch: 'full', component: RecipesListComponent },
+    ],
+  },
 
-    {path: 'registrazione',component: RegistrazioneComponent},
+  { path: 'registrazione', component: RegistrazioneComponent },
 
-   {path: 'contatti',component: ContattiComponent},
+  { path: 'contatti', component: ContattiComponent },
 
-    {path: 'nuova-ricetta', component: NuovaRicettaComponent},
+  { path: 'nuova-ricetta', component: NuovaRicettaComponent },
+  { path: 'login', component: LoginComponent },
+
   // {path: 'ricette',component: RecipesComponent},
- // {path: 'dettaglio/:_id', component: DetailComponent},
+  // {path: 'dettaglio/:_id', component: DetailComponent},
   //{path: '**',nomeComponente404}
-  {path: '**',redirectTo: 'home'}
+
+  { path: '**', redirectTo: 'home' }
 ];
 
 @NgModule({
   //aggiungere lo scroll per mobile {scrollPositionRestoration: 'enabled'} oppure {scrollPositionRestoration: 'top'}
-  imports: [RouterModule.forRoot(routes,{scrollPositionRestoration: 'enabled'})],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' }),
+  ],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
