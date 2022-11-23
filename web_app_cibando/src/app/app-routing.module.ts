@@ -1,3 +1,4 @@
+import { NuovaRicettaComponent } from './components/nuova-ricetta/nuova-ricetta/nuova-ricetta.component';
 import { ContattiComponent } from './components/contatti/contatti.component';
 import { RegistrazioneComponent } from './user/registrazione/registrazione.component';
 import { RecipesListComponent } from './components/recipes/recipes-list/recipes-list.component';
@@ -22,7 +23,7 @@ const routes: Routes = [
 
    {path: 'contatti',component: ContattiComponent},
 
-
+    {path: 'nuova-ricetta', component: NuovaRicettaComponent},
   // {path: 'ricette',component: RecipesComponent},
  // {path: 'dettaglio/:_id', component: DetailComponent},
   //{path: '**',nomeComponente404}

@@ -20,11 +20,15 @@
           <a class="nav-link " routerLink="registrazione"><fa-icon [icon]="iconaRegistered"></fa-icon>Registrati</a>
         </li>
 
+        <li class="nav-item">
+          <a class="nav-link " routerLink="nuova-ricetta"><fa-icon [icon]="nuovaRicetta"></fa-icon>Aggiungi ricetta</a>
+        </li>
+
         <li>
           <form class="form-inline my-2 my-lg-0">
             <input class=" search" type="search" placeholder="Search" aria-label="Ricerca">
             <button [style]="'border-radius: 50%'" class="btn btn-outline-success my-2 my-sm-0" type="submit">
-              <fa-icon [icon]="search"></fa-icon>
+              <fa-icon [icon]="search" class="bottone-icon"></fa-icon>
             </button>
           </form>
         </li>

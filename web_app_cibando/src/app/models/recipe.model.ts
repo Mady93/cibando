@@ -4,6 +4,6 @@ title: string;
 description: string;
 image: string;
 difficulty: number;
-date: string,
+// date: string,
 published: boolean;
 }

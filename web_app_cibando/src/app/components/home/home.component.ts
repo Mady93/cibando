@@ -25,18 +25,11 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.evidenziato = !this.evidenziato;
   }
 
-  //cookie di registrati nella home - dati salvati con localStorage altrimenti non si vedono
   riceviDatiUtente() {
     this.userService.datiUtente.subscribe((res: any) => {
-      //  localStorage.setItem('nome', res.nome);
-      //  localStorage.setItem('email', res.email);
        this.nome = res.nome;
        this.email = res.email;
     });
-    //  if (localStorage.getItem('nome')) {
-    //    this.nome = localStorage.getItem('nome');
-    //    this.email = localStorage.getItem('email');
-    //}
   }
 
   closeModal() {

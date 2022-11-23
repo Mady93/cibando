@@ -30,16 +30,21 @@ header{
 
 button.btn.btn-outline-success {
   display: block;
-    position: relative;
-    top: -37px;
-    height: 40px;
-    border-color: white;
-    margin-left: 488%;
+  position: relative;
+  top: -38px;
+  height: 40px;
+  border-color: white;
+  margin-left: 415%;
 }
 
 button.btn.btn-outline-success:hover {
-  background-color: #c0820d;
+  background-color: #8e210b!important;
+
+  .bottone-icon:hover{
+    color:  #000000!important;
+  }
 }
+
 
 input.search {
   margin-right: 10px;
@@ -48,8 +53,9 @@ input.search {
     padding-left: 10px;
     border: 0px;
     border-radius: 3px;
-    margin-left: 388%;
+    // margin-left: 388%;
     text-align: center;
+    margin-left: 315%;
 }
 
 

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faNewspaper } from '@fortawesome/free-regular-svg-icons';
-import { faMailBulk, faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faAdd, faMailBulk, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faHouzz } from '@fortawesome/free-brands-svg-icons';
 import{ faRegistered} from '@fortawesome/free-regular-svg-icons';
 
@@ -15,6 +15,8 @@ export class HeaderComponent implements OnInit {
   iconaMail = faMailBulk;
   iconaRegistered = faRegistered;
   search = faSearch;
+  nuovaRicetta = faAdd;
+
   //collapse navbar
   isCollapsed = true;
 

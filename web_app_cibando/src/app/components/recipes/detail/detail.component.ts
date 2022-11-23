@@ -16,8 +16,6 @@ export class DetailComponent implements OnInit {
   ricetta: Recipe;
   percorsoDifficolta = "../../../../assets/img/difficolta-";
 
-
-  //######## quando uso i service -- si come il service e injectable, ora devo inniettare nelcostruttore il servizio
   //##### activatedRoute -- prendo la rotta attivata
   constructor(
     private recipeService: RecipeService,
@@ -30,19 +28,6 @@ export class DetailComponent implements OnInit {
     this.onGetRecipe2();
   }
 
-  onGetRecipe(): void {
-    const id = Number(this.activatedRoute.snapshot.paramMap.get('_id'));
-    this.recipeService.getRecipe('_id').subscribe({
-      next: (res) => {
-        this.ricetta = res;
-        console.log(this.ricetta);
-      },
-      error: (err) => {
-        console.log(err);
-      },
-    });
-  }
-  //#### meglio usare il 2 metodo
   onGetRecipe2():void{
     this.activatedRoute.params.subscribe((urlParams)=>{
       const id = urlParams['_id'];
@@ -52,7 +37,5 @@ export class DetailComponent implements OnInit {
   }
 });
   }
-
-
 
 }

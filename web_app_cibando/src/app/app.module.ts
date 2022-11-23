@@ -22,6 +22,7 @@ import{BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 import { ContattiComponent } from './components/contatti/contatti.component';
+import { NuovaRicettaComponent } from './components/nuova-ricetta/nuova-ricetta/nuova-ricetta.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { ContattiComponent } from './components/contatti/contatti.component';
     RecipesListComponent,
     RegistrazioneComponent,
     ContattiComponent,
+    NuovaRicettaComponent,
 
   ],
   imports: [
