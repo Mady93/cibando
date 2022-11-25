@@ -34,7 +34,7 @@ button.btn.btn-outline-success {
   top: -38px;
   height: 40px;
   border-color: white;
-  margin-left: 415%;
+  margin-left: 297%;
 }
 
 button.btn.btn-outline-success:hover {
@@ -45,9 +45,9 @@ button.btn.btn-outline-success:hover {
   }
 }
 
-// .accedi{
-
-// }
+li.nav-item.accedi {
+  margin-top: 5px!important;
+}
 
 input.search {
   margin-right: 10px;
@@ -58,7 +58,7 @@ input.search {
     border-radius: 3px;
     // margin-left: 388%;
     text-align: center;
-    margin-left: 315%;
+    margin-left: 198%;
 }
 
 
@@ -66,3 +66,42 @@ input.search {
     margin-top: 30px;
 }
 
+a.esci {
+    background-color: white;
+    border-radius: 50%;
+    color: #950a0a;
+    display: flex;
+    font-size: 19px;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+i.pi.pi-users {
+  margin-left: 5px!important;
+  color: white!important;
+}
+
+span.nuova-ricetta {
+  padding: 15px!important;
+  color: white!important;
+  /* margin-top: -3%; */
+}
+.nuova-ricetta2{
+  padding: 15px!important;
+}
+
+.nav-sposta {
+  margin-top: 3px !important;
+  padding: 10px!important;
+}
+span.name.sposta-interpolation-string {
+  padding: 8px!important;
+  color: white!important;
+}
+.nuova-ricetta-color{
+  color: white!important;
+}

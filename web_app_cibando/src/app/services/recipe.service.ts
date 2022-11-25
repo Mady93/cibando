@@ -46,7 +46,7 @@ getRecipe(id: string):Observable<Recipe>{
 
 
   //crea ricetta - componente nuova-ricetta.ts
-postRecipe(form:any): Observable<Recipe>{
+postRecipe(form:Recipe): Observable<Recipe>{
 return this.http.post<Recipe>(`${this.apiBaseUrl}/`,form);
 }
 

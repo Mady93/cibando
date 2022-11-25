@@ -1,3 +1,5 @@
+import { RecipeService } from 'src/app/services/recipe.service';
+import { RecipeCardComponent } from './../recipe-card/recipe-card.component';
 import { Router } from '@angular/router';
 // components/user/login
 import { AuthService } from './../../service/auth.service';
@@ -26,7 +28,9 @@ export class HeaderComponent implements OnInit, DoCheck {
   // components/service/user
   user: any;
 
-  constructor(private router: Router, public authService: AuthService) {}
+  inputSearch= '';
+
+  constructor(private router: Router, public authService: AuthService, private recipeService: RecipeService) {}
 
   ngOnInit(): void {}
 
@@ -40,4 +44,16 @@ export class HeaderComponent implements OnInit, DoCheck {
     this.authService.logOut();
     this.router.navigate(['/login']);
   }
+
+
+
+// onInput(e:Event){
+// this.inputSearch= (<HTMLInputElement>e.target).value;
+// console.log(this.inputSearch);
+//   }
+
+// onClick(){
+
+// }
+
 }

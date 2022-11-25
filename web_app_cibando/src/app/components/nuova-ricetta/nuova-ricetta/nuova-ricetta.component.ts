@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RecipeService } from './../../../services/recipe.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-// import { Recipe } from 'src/app/models/recipe.model';
+import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 @Component({
   selector: 'app-nuova-ricetta',
@@ -11,17 +11,59 @@ import { Router } from '@angular/router';
 })
 export class NuovaRicettaComponent implements OnInit {
 
+  editor = ClassicEditor;
+
+  editorConfig = {
+    toolbar: {
+        items: [
+            'bold',
+            'italic',
+            'link',
+            'bulletedList',
+            'numberedList',
+            '|',
+            // 'indent',
+            // 'outdent',
+            // '|',
+            'codeBlock',
+            // 'imageUpload',
+            // 'blockQuote',
+            // 'insertTable',
+            'undo',
+            'redo',
+        ]
+    },
+    image: {
+        toolbar: [
+            'imageStyle:full',
+            'imageStyle:side',
+            '|',
+            'imageTextAlternative'
+        ]
+    },
+    table: {
+        contentToolbar: [
+            'tableColumn',
+            'tableRow',
+            'mergeTableCells'
+        ]
+    },
+    height: 300,
+};
+
   form = new FormGroup(
     {
       title: new FormControl('', [
         Validators.required, Validators.minLength(3)]),
 
-      description: new FormControl('', [
-        Validators.required,
-        Validators.minLength(3),
-      ]),
+      description: new FormControl(''),
+      //, [
+      //   // Validators.required,
+      //   // Validators.minLength(3),
+      // ]),
 
-      difficulty: new FormControl(1, [Validators.required]),
+      difficulty: new FormControl(0),
+        //, [Validators.required]),
 
       image: new FormControl('', [
         Validators.required,
@@ -43,16 +85,8 @@ export class NuovaRicettaComponent implements OnInit {
 
 
   onSubmit(){
-  //   const ricetta: Recipe ={
-  //   "_id": 0,
-  //   "title": this.form.value.title,
-  //   "description": this.form.value.description,
-  //   "image": this.form.value.image,
-  //   "difficulty": Number(this.form.value.difficulty),
-  //   "published": Boolean(this.form.value.published)
-  // }
     console.log(this.form.value);
-    this.recipeService.postRecipe(this.form.value).subscribe({
+    this.recipeService.postRecipe(this.form.getRawValue()).subscribe({
       next:(res)=>res,
       error:(err)=>console.log(err)
     });

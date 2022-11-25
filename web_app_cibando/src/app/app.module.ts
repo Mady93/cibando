@@ -11,6 +11,7 @@ import{DividerModule} from "primeng/divider";
 import{PasswordModule} from "primeng/password";
 import{ToastModule} from 'primeng/toast';
 import { MessageService } from 'primeng/api';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 import { AppComponent } from './app.component';
 import { CarouselComponent } from './components/home/carousel/carousel.component';
@@ -25,6 +26,7 @@ import { RegistrazioneComponent } from './user/registrazione/registrazione.compo
 import { ContattiComponent } from './components/contatti/contatti.component';
 import { NuovaRicettaComponent } from './components/nuova-ricetta/nuova-ricetta/nuova-ricetta.component';
 import { LoginComponent } from './components/components/user/login/login.component';
+import { ProfileComponent } from './user/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,8 @@ import { LoginComponent } from './components/components/user/login/login.compone
     RegistrazioneComponent,
     ContattiComponent,
     NuovaRicettaComponent,
-    LoginComponent
+    LoginComponent,
+    ProfileComponent
 
   ],
   imports: [
@@ -56,6 +59,7 @@ import { LoginComponent } from './components/components/user/login/login.compone
     NgbCollapseModule,
     HttpClientModule,
     ToastModule,
+    CKEditorModule
   ],
   providers: [MessageService],
   bootstrap: [AppComponent]

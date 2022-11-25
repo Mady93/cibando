@@ -10,7 +10,9 @@
     </div>
     <div class="container-testo" >
       <h5 class="card-title">{{ricetta.title}}</h5>
-      <p class="card-text">{{ricetta.description}}</p>
+      <!-- <p class="card-text">{{ricetta.description}}</p> -->
+      <!-- <span  [innerHTML]="ricetta.description"></span> -->
+      <p class="card-text"><span [innerHTML]="ricetta.description"></span></p>
     </div>
     <br>
     <div class="difficolta"><span class="difficulty">Difficoltà:</span>
