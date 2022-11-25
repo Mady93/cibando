@@ -15,6 +15,8 @@ export class RecipeService {
 
   create = new ReplaySubject();
 
+  cerca = new ReplaySubject();
+
   constructor(private http: HttpClient) { }
 
   //prendo tutte le ricette
@@ -50,6 +52,10 @@ postRecipe(form:Recipe): Observable<Recipe>{
 return this.http.post<Recipe>(`${this.apiBaseUrl}/`,form);
 }
 
+
+searchRecipes(text:string){
+  return this.http.get<Recipe[]>(`${this.apiBaseUrl}/cerca/${text}`);
+}
 
   }
 

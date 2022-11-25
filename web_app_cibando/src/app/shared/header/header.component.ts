@@ -3,7 +3,7 @@ import { RecipeCardComponent } from './../recipe-card/recipe-card.component';
 import { Router } from '@angular/router';
 // components/user/login
 import { AuthService } from './../../service/auth.service';
-import { Component, OnInit, DoCheck } from '@angular/core';
+import { Component, OnInit, DoCheck, Input } from '@angular/core';
 import { faNewspaper } from '@fortawesome/free-regular-svg-icons';
 import { faAdd, faMailBulk, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faHouzz } from '@fortawesome/free-brands-svg-icons';
@@ -27,8 +27,8 @@ export class HeaderComponent implements OnInit, DoCheck {
 
   // components/service/user
   user: any;
-
   inputSearch= '';
+  testo: String;
 
   constructor(private router: Router, public authService: AuthService, private recipeService: RecipeService) {}
 
@@ -45,6 +45,10 @@ export class HeaderComponent implements OnInit, DoCheck {
     this.router.navigate(['/login']);
   }
 
+  cerca(){
+    this.recipeService.cerca.next(this.testo);
+    this.router.navigate(['ricette/result']);
+  }
 
 
 // onInput(e:Event){

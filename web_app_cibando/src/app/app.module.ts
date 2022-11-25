@@ -27,6 +27,7 @@ import { ContattiComponent } from './components/contatti/contatti.component';
 import { NuovaRicettaComponent } from './components/nuova-ricetta/nuova-ricetta/nuova-ricetta.component';
 import { LoginComponent } from './components/components/user/login/login.component';
 import { ProfileComponent } from './user/profile/profile.component';
+import { ResultComponent } from './components/result/result.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { ProfileComponent } from './user/profile/profile.component';
     ContattiComponent,
     NuovaRicettaComponent,
     LoginComponent,
-    ProfileComponent
+    ProfileComponent,
+    ResultComponent
 
   ],
   imports: [

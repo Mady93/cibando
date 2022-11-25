@@ -1,3 +1,4 @@
+import { ResultComponent } from './components/result/result.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes,  CanActivate } from '@angular/router';
 
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path: 'ricette',component: RecipesComponent,children: [
       { path: 'dettaglio/:title/:_id', component: DetailComponent },
       { path: '', pathMatch: 'full', component: RecipesListComponent },
+      {path:'result',component:ResultComponent},
     ],
   },
 
@@ -31,6 +33,7 @@ const routes: Routes = [
   {path: 'nuova-ricetta',component: NuovaRicettaComponent,canActivate: [LoggedInGuard]},
   { path: 'login', component: LoginComponent },
   {path: 'profilo',component: ProfileComponent,canActivate: [LoggedInGuard]},
+
   //{path: '**',nomeComponente404}
   { path: '**', redirectTo: 'home' },
 ];
